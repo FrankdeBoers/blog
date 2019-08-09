@@ -10,11 +10,11 @@
 
 
 这两行log虽然没有Error标志，但是仍然值得我们注意，正常情况下的MPEG4Wrier的log输出如下：
-~~~text
+
 05-31 14:47:06.620068 27778 31527 I MPEG4Writer: Received total/0-length (<code class="highlighter-rouge">149/0</code>) buffers and encoded 149 frames. - Audio
 05-31 14:47:06.620111 27778 31527 I MPEG4Writer: Audio track drift time: 0 us
-05-31 14:47:06.620292 27778 31526 I MPEG4Writer: Received total/0-length (==62/0==) buffers and encoded 62 frames. - Video
-~~~
+05-31 14:47:06.620292 27778 31526 I MPEG4Writer: Received total/0-length (<code class="highlighter-rouge">62/0</code>) buffers and encoded 62 frames. - Video
+
 
 第一种异常情况下，Video的编码帧只有0 frame，说明当时没有采集到视频帧数据。
 第二种正常情况下，Video和Audio的帧数都比较正常。
