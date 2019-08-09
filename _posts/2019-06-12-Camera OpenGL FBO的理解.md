@@ -1,3 +1,9 @@
+---
+title: Camera OpenGL FBO的理解
+tags: Android OpenGL Camera
+categories: Android
+---
+
 ### 背景概念：
 
 *首先，Android显示系统中，系统默认的渲染器是OpenGL，混合使用skia，各个厂商可能有不同的实现，大部分都是OpenGL。   Android在系统启动时，经过BootLoader启动、kernel启动后，进入第三阶段，init进程会启动一系列的核心进程，其中包括ServiceManager、zygote、OpenGL，OpenGL是显示系统的基础，OpenGL启动之后，就可以播放动态的开机动画了。所以说，Android渲染的基础的OpenGL，而**OpenGL渲染管线的最后一个阶段，就是帧缓冲区**（FrameBuffer）。这也是文章讨论的重点。*
