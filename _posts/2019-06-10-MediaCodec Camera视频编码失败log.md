@@ -5,8 +5,8 @@
 
 查看mtklog，发现了如下log：
 ~~~text
-05-31 14:43:35.819242 27778 28253 I MPEG4Writer: Received total/0-length (==0/0==) buffers and encoded 0 frames. - Video
-05-31 14:43:35.819443 27778 28252 I MPEG4Writer: Received total/0-length (==7/0==) buffers and encoded 7 frames. - Audio
+05-31 14:43:35.819242 27778 28253 I MPEG4Writer: Received total/0-length ($\0/0{red}{red}$) buffers and encoded 0 frames. - Video
+05-31 14:43:35.819443 27778 28252 I MPEG4Writer: Received total/0-length ($\7/0{red}{red}$) buffers and encoded 7 frames. - Audio
 ~~~
 
 这两行log虽然没有Error标志，但是仍然值得我们注意，正常情况下的MPEG4Wrier的log输出如下：
