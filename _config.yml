@@ -30,8 +30,8 @@ email: 279375981@qq.com
 description: ""
 github:
   username: FrankdeBoers
-swiftype:
-  searchId: iXZyPokVfxFaBTvi64Y6
+#swiftype:
+#  searchId: iXZyPokVfxFaBTvi64Y6
 gitment:
     repo: blog
     client_id: 45e45fa4f14dd6ba8844
