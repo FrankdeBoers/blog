@@ -25,10 +25,3 @@ FBO。
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/2019061210592490.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0ZyYWtpZV9Ld29r,size_16,color_FFFFFF,t_70)
 
 白话文解释：FBO是一个挂接器，类似画家画画用的托架；其中FBO只能挂接两种对象，纹理图像 和 渲染图像，这个理解就是画家准备创作作品前，在托架上放的是油画纸还是水墨纸（纹理），或者根本不是放画纸，放的是木板雕刻（渲染模板）。最后我们等画家创作出他的艺术品后，直接搬到到展示区，呈现給大家。
-
-
-
-参考文章：
-《OpenGL Frame Buffer Object (FBO)》 http://www.songho.ca/opengl/gl_fbo.html
-《OpenGL.ES在Android上的简单实践：23-水印录制（FBO离屏渲染，解决透明冲突，画中画）》 https://blog.csdn.net/a360940265a/article/details/80627394
-
