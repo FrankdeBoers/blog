@@ -1,7 +1,7 @@
 
 ---
 title: Android 开机动画客制化
-tags: Android Framework
+tags: Android Camera 
 categories: Android
 ---
 
