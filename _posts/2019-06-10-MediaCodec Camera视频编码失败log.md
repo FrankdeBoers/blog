@@ -1,4 +1,10 @@
 
+---
+title: Android 开机动画客制化
+tags: Android Framework
+categories: Android
+---
+
 我们的Camera是使用OpenGL开发的滤镜相机，有滤镜、贴纸等功能，测试报了如下问题：
 
 **问题现象**：使用滤镜相机录制视频，结束后视频播放显示全黑，没有画面。
