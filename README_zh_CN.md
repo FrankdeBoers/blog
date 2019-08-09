@@ -1,6 +1,6 @@
 # 博客地址
 
-<https://frankdeboers.github.io/blog/>
+<https://frankdeboers.github.io/blog>
 
 # 必改内容
 

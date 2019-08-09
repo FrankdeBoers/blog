@@ -37,7 +37,7 @@ gitment:
     client_id: 45e45fa4f14dd6ba8844
     client_secret: 0afc2c9b9b98f9a68e0143e197f4e9c7aa2329e7
 
-url: "https://frankdeboers.github.io/blog/"
+url: "https://frankdeboers.github.io/blog"
 imgrepo: "https://frankdeboers.github.io/blog/static/img"
 
 
