@@ -1,5 +1,5 @@
 ---
-title: Android 开机动画客制化
+title: MediaCodec Camera视频编码失败log
 tags: Android Camera 
 categories: Android
 ---
