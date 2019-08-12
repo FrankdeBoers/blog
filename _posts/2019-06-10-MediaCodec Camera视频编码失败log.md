@@ -3,6 +3,7 @@ title: MediaCodec Camera视频编码失败log
 tags: Android Camera 
 categories: Android
 ---
+本文从项目中Bug入手，提供一种视频编解码失败的解决思路。
 
 我们的Camera是使用OpenGL开发的滤镜相机，有滤镜、贴纸等功能，测试报了如下问题：
 
