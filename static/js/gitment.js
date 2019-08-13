@@ -2895,7 +2895,7 @@ var Gitment =
 
             if (error) {
                 var errorBlock = document.createElement('div');
-                errorBlock.className = 'gitment-comments-error';
+                // errorBlock.className = 'gitment-comments-error';
 
                 if (error === _constants.NOT_INITIALIZED_ERROR && user.login && user.login.toLowerCase() === instance.owner.toLowerCase()) {
                     var initHint = document.createElement('div');
