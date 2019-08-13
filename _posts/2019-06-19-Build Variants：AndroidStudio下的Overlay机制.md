@@ -35,9 +35,9 @@ categories: Android
 #### 1.APP名称修改方法：
 AndroidManifest.xml中，引用了string.xml的值，我们只要修改string.xml里面app_name的值即可。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20190618164716402.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0ZyYWtpZV9Ld29r,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://raw.githubusercontent.com/FrankdeBoers/blog/master/static/img/app_name.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2019061816483891.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0ZyYWtpZV9Ld29r,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://raw.githubusercontent.com/FrankdeBoers/blog/master/static/img/string.png)
 
 #### 2. 在productFlavors里面新建渠道：America、India、Africa。
 
