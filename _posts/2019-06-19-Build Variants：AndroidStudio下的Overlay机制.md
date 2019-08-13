@@ -35,9 +35,7 @@ AndroidManifest.xml中，引用了string.xml的值，我们只要修改string.xm
 
 4. 点击Studio左下方的Build Variants，即可选择相应的定制版本进行调试
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20190618172446981.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0ZyYWtpZV9Ld29r,size_16,color_FFFFFF,t_70)通过上面的步骤，就可以实现定制渠道发布版本了。
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190618172446981.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0ZyYWtpZV9Ld29r,size_16,color_FFFFFF,t_70)
 
-当然实际开发中，不只是这么简单的修改应用名称，
-
-Overlay不止可以覆盖res资源文件，也可以覆盖java文件。（Amazing！）
+通过上面的步骤，就可以实现定制渠道发布版本了。当然实际开发中，不只是这么简单的修改应用名称，Overlay不止可以覆盖res资源文件，也可以覆盖java文件。（Amazing！）
 
