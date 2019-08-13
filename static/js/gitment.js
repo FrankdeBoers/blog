@@ -2912,7 +2912,7 @@ var Gitment =
                     initHint.appendChild(initButton);
                     errorBlock.appendChild(initHint);
                 } else {
-                    errorBlock.innerText = error;
+                    errorBlock.innerText = 'No Comment Yet';
                 }
                 container.appendChild(errorBlock);
                 return container;
