@@ -1,7 +1,7 @@
 ---
 title: opencv SURF、SIFT的使用
-tags: c++ opencv
-categories: c++
+tags: C++ openCV
+categories: C++
 ---
 
 15年在合工大实验室，给安徽省交通厅做的项目。 通过分析交通路口摄像头抓拍的图片，分析车辆中的驾驶员是否系了安全带。
