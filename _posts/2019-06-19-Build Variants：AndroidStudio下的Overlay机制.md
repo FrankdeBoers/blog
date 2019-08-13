@@ -7,8 +7,7 @@ categories: Android
 之前在做Android ROM开发时，有一些需求，比如美洲国家的Camera APP，桌面图标需要定制为美洲特色，相机按钮需要定制为美洲特色等等。
 在Android源码中，我们经常使用overlay机制，进行资源的覆盖。
 
-> Android Overlay是一种资源替换机制，它能在不重新打包apk的情况下，实现资源文件的替换（res目录非assert目录），
-> Overlay又分为静态Overlay(Static Resource Overlay)与运行时Overlay(Runtime Resource Overlay)。
+> Android Overlay是一种资源替换机制，它能在不重新打包apk的情况下，实现资源文件的替换（res目录非assert目录），Overlay又分为静态Overlay(Static Resource Overlay)与运行时Overlay(Runtime Resource Overlay)。
 
 这篇文章对于overlay机制的介绍比较详细：https://www.jianshu.com/p/9304089c513d
 
@@ -41,15 +40,15 @@ AndroidManifest.xml中，引用了string.xml的值，我们只要修改string.xm
 
 #### 2. 在productFlavors里面新建渠道：America、India、Africa。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20190618172007953.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0ZyYWtpZV9Ld29r,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://raw.githubusercontent.com/FrankdeBoers/blog/master/static/img/buildvariants.png)
 
 #### 3.在src目录下，也就是main目录的同级，创建America、India、Africa三个文件夹，并分别创建string.xml文件，修改app_name。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20190618172248453.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0ZyYWtpZV9Ld29r,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://raw.githubusercontent.com/FrankdeBoers/blog/master/static/img/resource.png)
 
 #### 4. 点击Studio左下方的Build Variants，即可选择相应的定制版本进行调试
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20190618172446981.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0ZyYWtpZV9Ld29r,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://raw.githubusercontent.com/FrankdeBoers/blog/master/static/img/build.png)
 
 通过上面的步骤，就可以实现定制渠道发布版本了。当然实际开发中，不只是这么简单的修改应用名称，Overlay不止可以覆盖res资源文件，也可以覆盖java文件。（Amazing！）
 
