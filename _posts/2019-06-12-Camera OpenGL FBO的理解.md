@@ -24,6 +24,7 @@ categories: Android
 FBO中有两类绑定的对象：纹理图像（texture images）和渲染图像（renderbuffer images）。如果纹理对象绑定到FBO，那么OpenGL就会执行渲染到纹理（render to texture）的操作，如果渲染对象绑定到FBO，那么OpenGL会执行离屏渲染(offscreen rendering)
 FBO可以理解为包含了许多挂接点的一个对象，它自身并不存储图像相关的数据，他提供了一种可以快速切换外部纹理对象和渲染对象挂接点的方式，在FBO中必然包含一个深度缓冲区挂接点和一个模板缓冲区挂接点，同时还包含许多颜色缓冲区挂节点（具体多少个受OpenGL实现的影响，可以通过GL_MAX_COLOR_ATTACHMENTS使用glGet查询），FBO的这些挂接点用来挂接纹理对象和渲染对象，这两类对象中才真正存储了需要被显示的数据。FBO提供了一种快速有效的方法挂接或者解绑这些外部的对象，对于纹理对象使用 glFramebufferTexture2D，对于渲染对象使用glFramebufferRenderbuffer
 FBO。
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/2019061210592490.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0ZyYWtpZV9Ld29r,size_16,color_FFFFFF,t_70)
 
 白话文解释：FBO是一个挂接器，类似画家画画用的托架；其中FBO只能挂接两种对象，纹理图像 和 渲染图像，这个理解就是画家准备创作作品前，在托架上放的是油画纸还是水墨纸（纹理），或者根本不是放画纸，放的是木板雕刻（渲染模板）。最后我们等画家创作出他的艺术品后，直接搬到到展示区，呈现給大家。
