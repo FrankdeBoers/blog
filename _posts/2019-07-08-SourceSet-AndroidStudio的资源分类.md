@@ -4,7 +4,7 @@
 
 我们最终想实现如下的效果：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20190619181956233.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0ZyYWtpZV9Ld29r,size_16,color_FFFFFF,t_70)
+![目标](https://raw.githubusercontent.com/FrankdeBoers/blog/master/static/img/%E6%A8%A1%E5%9D%97.png)
 
 也就是UI资源单独作为一个目录出现，app目录下面不包含UI资源相关的文件。并且资源文件，根据不同的渠道可以实现动态编译。
 
@@ -18,12 +18,12 @@
 
 4.方便模块化，不同模块的开发，各自维护自己模块，如商城模块，只需要关注ShopUI下的资源。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20190619184033439.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0ZyYWtpZV9Ld29r,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://raw.githubusercontent.com/FrankdeBoers/blog/master/static/img/%E6%A8%A1%E5%9D%972.png)
 
 ### 1.build.gradle配置
 #### 1.在build.gradle中，新增变量app_ui_folder，在后面会用到
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20190619190552624.png)
+![在这里插入图片描述](https://raw.githubusercontent.com/FrankdeBoers/blog/master/static/img/def.png)
 
 #### 2.利用productFlavors变种两个渠道
 
@@ -108,12 +108,13 @@ sourceSets {
 
 #### 2.1 Project视图下，在根目录TestGradle右键新增UI目录。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2019061919154611.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0ZyYWtpZV9Ld29r,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://raw.githubusercontent.com/FrankdeBoers/blog/master/static/img/%E6%96%B0%E5%A2%9E1.png)
 
 #### 2.2 在UI目录下新增如下目录
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20190619191649668.png)
+![在这里插入图片描述](https://raw.githubusercontent.com/FrankdeBoers/blog/master/static/img/%E6%96%B0%E5%A2%9E2.png)
+
 #### 2.3 将app目录下的res文件夹，copy至UI\AppUI\Commom目录下，作为基类res
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20190619191803275.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0ZyYWtpZV9Ld29r,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://raw.githubusercontent.com/FrankdeBoers/blog/master/static/img/%E6%96%B0%E5%A2%9E3.png)
 
