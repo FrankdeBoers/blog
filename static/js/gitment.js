@@ -2894,27 +2894,31 @@ var Gitment =
             container.className = 'gitment-container gitment-comments-container';
 
             if (error) {
-                var errorBlock = document.createElement('div');
+                // var errorBlock = document.createElement('div');
                 // errorBlock.className = 'gitment-comments-error';
 
-                if (error === _constants.NOT_INITIALIZED_ERROR && user.login && user.login.toLowerCase() === instance.owner.toLowerCase()) {
-                    var initHint = document.createElement('div');
-                    var initButton = document.createElement('button');
-                    initButton.className = 'gitment-comments-init-btn';
-                    initButton.onclick = function () {
-                        initButton.setAttribute('disabled', true);
-                        instance.init().catch(function (e) {
-                            initButton.removeAttribute('disabled');
-                            alert(e);
-                        });
-                    };
-                    initButton.innerText = 'Initialize Comments';
-                    initHint.appendChild(initButton);
-                    errorBlock.appendChild(initHint);
-                } else {
-                    errorBlock.innerText = 'No Comment Yet';
-                }
-                container.appendChild(errorBlock);
+                // if (error === _constants.NOT_INITIALIZED_ERROR && user.login && user.login.toLowerCase() === instance.owner.toLowerCase()) {
+                //     var initHint = document.createElement('div');
+                //     var initButton = document.createElement('button');
+                //     initButton.className = 'gitment-comments-init-btn';
+                //     initButton.onclick = function () {
+                //         initButton.setAttribute('disabled', true);
+                //         instance.init().catch(function (e) {
+                //             initButton.removeAttribute('disabled');
+                //             alert(e);
+                //         });
+                //     };
+                //     initButton.innerText = 'Initialize Comments';
+                //     initHint.appendChild(initButton);
+                //     errorBlock.appendChild(initHint);
+                // } else {
+                //     errorBlock.innerText = error;
+                // }
+                // container.appendChild(errorBlock);
+                var emptyBlock = document.createElement('div');
+                emptyBlock.className = 'gitment-comments-empty';
+                emptyBlock.innerText = 'No Comment Yet';
+                container.appendChild(emptyBlock);
                 return container;
             } else if (comments === undefined) {
                 var loading = document.createElement('div');
