@@ -1,3 +1,8 @@
+---
+title: Build Variants：AndroidStudio下的Overlay机制
+tags: Android Androi Studio
+categories: Android
+---
 
 之前在做Android ROM开发时，有一些需求，比如美洲国家的Camera APP，桌面图标需要定制为美洲特色，相机按钮需要定制为美洲特色等等。
 在Android源码中，我们经常使用overlay机制，进行资源的覆盖。
