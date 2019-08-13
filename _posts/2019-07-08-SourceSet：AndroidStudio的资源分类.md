@@ -1,3 +1,9 @@
+---
+title: SourceSet：AndroidStudio的分渠道打包
+tags: Android Android Studio
+categories: Android
+---
+
 上一篇从技术上面，利用Gradle实现了Overlay机制。Gradle中还有一个sourceSet，可以实现更骚的操作。
 
 需求：我们的应用，主要有三个模块，主界面模块、设置模块、商城模块，三个模块各有负责人进行开发。  新增欧洲和美洲市场，我们需要根据不同市场，进行定制开发，如欧洲市场不能有开屏广告等等。
