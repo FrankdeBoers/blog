@@ -1,6 +1,6 @@
 ##[点我查看中文说明](https://github.com/FrankdeBoers/blog/blob/master/README_zh_CN.md) 
 
-# Blog Address 
+# Blog Address
 
 <https://frankdeboers.github.io/blog>
 
