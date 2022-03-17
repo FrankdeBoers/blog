@@ -1,3 +1,9 @@
+---
+title: Android BuildVariant+Flavor 构建变体
+tags: Android BuildVariant
+categories: Android
+---
+
 ### Android BuildVariant+Flavor 构建变体
 
 #### 一、背景：
