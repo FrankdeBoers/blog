@@ -29,7 +29,7 @@ categories: Android
 
 ##### 3.1 BuildVariant功能概览
 AndroidStudio在编译版本时，执行的其实是gradle中定义的task，点击AndroidStudio左侧的BuildVariant，可以选择构建的版本，比如选择bzDebug，实际上在run时，执行的是`./gradlew assembleBZDebug`指令。
-![AnroidStudio-BuildVariant.png](https://upload-images.jianshu.io/upload_images/4983057-c53f6bb651be74c0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![AnroidStudio-BuildVariant.png](https://raw.githubusercontent.com/FrankdeBoers/blog/master/static/img/buildvariant-1.png)
 
 
 BuildVariant编译变体由两部分决定：
@@ -63,7 +63,7 @@ android {
 ```
 
 附官方文档（https://google.github.io/android-gradle-dsl/3.4/com.android.build.gradle.internal.dsl.BuildType.html）
-![BuildType属性](https://upload-images.jianshu.io/upload_images/4983057-526d8d037f09bce0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![BuildType属性](https://raw.githubusercontent.com/FrankdeBoers/blog/master/static/img/buildvariant-11.png)
 
 
 ##### 3.3 ProductFlavor 产品变种
@@ -141,14 +141,14 @@ productFlavor还有个用法，是flavorDimension，可以用于减少手写代�
 
 
 
-![图片.png](https://upload-images.jianshu.io/upload_images/4983057-0e87115b3b7f66b0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![图片.png](https://raw.githubusercontent.com/FrankdeBoers/blog/master/static/img/buildvariant-3.png)
 
 这里要重点注意几个事情：
 - 1、java目录下面的代码差异，只能在china变体文件夹下面，比如LoginActivity.java，只能存在于china、google、bz等变体目录，在main目录下面不需要定义，否则在编译是会出现文件重复定义的错误。
 - 2、assets、res目录是求合集，比如执行./gradlew assembleBzRelease，会将main/res和bz/res下的资源进行合并，都打到包里，如果存在重名文件，比如bz下的图标ic_launcher.png，与main下的图标，其实是同名的，那么编译时，会优先以变体目录下的文件为准。
 - 3、基于2，建议认真整理assets目录，将差异缩短到最小，放到各个变体目录。
 
-![图片.png](https://upload-images.jianshu.io/upload_images/4983057-aa60bd9fdf180527.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![图片.png](https://raw.githubusercontent.com/FrankdeBoers/blog/master/static/img/buildvariant-2.png)
 
 现在回过头来，看我们的目录一，整理了各个版本的差异，这里再贴一下：
 | 版本        | 图标  |  登录注册页面  | 接入sdk |
@@ -160,7 +160,7 @@ productFlavor还有个用法，是flavorDimension，可以用于减少手写代�
 我们会发现，对于B站版本，它只是在res方面与china版本不同，java代码一直，但是如果按照上面的方式，就需要在bz和china两个变体目录下面，都有java代码。这样不是不行，但是结构上很丑，而且如果java代码有变动，需要同时修改两个目录下面的文件，存在漏修改的风险。
 
 看官方文档，提供了另一种方式，用来指定变体差异目录，比如我们想把变体目录整体放在BuildVariant下面：
-![图片.png](https://upload-images.jianshu.io/upload_images/4983057-1845cc483b944825.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![图片.png](https://raw.githubusercontent.com/FrankdeBoers/blog/master/static/img/buildvariant-4.png)
 
 代码示例：
 ```
@@ -188,7 +188,7 @@ android {
 ```
 通过上面的代码，就可以实现我们的需求，其中，china下面是java代码差异，google是java+图标差异，bz下面是图标差异。
 需要注意的时，外面的src/bz，仍然会在编译阶段被打到包里，比如在此目录下放置如下内容，最终的apk包也会有这个文件。
-![图片.png](https://upload-images.jianshu.io/upload_images/4983057-fdaf5ac7bb770e96.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![图片.png](https://raw.githubusercontent.com/FrankdeBoers/blog/master/static/img/buildvariant-5.png)
 
 这里要说明一下java代码差异，以我们的登录注册页面来说，china和google版本页面完全不一样，而且还有三方登录的差异，所以一开始我们就是写了两个Activity页面，china版本启动LoginChinaActivity，google版本启动LoginGoogleActivity。   在新的模式下，两个Activity都重命名为LoginActivity，在main下面启动的都是LoginActivity，根据打包指令决定是启动google目录下面的LoginActivity，还是china目录下面的LoginActivity。
 
